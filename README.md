@@ -1,0 +1,1 @@
+all assets are added
