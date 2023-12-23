@@ -24,8 +24,8 @@ html{
 }
 
 .wrapper{
-    height: 100vh;
-    width: 100vw;
+    /* height: 100vh; */
+    /* width: 100vw; */
     overflow-y: auto;
     overflow-x: hidden;
     background-color: rgb(20, 26, 53);
@@ -141,14 +141,14 @@ html{
 
 .fade-text{
     position: absolute;
-    bottom: -84%;
+    bottom: -85%;
     left: -5%;
     margin-bottom: 1.4rem;
     user-select: none;
-    font-size: 7em;
+    font-size: 8em;
     font-weight: 600;
     /* color: rgba(110, 93, 207, 0.765); */
-    color: rgb(231, 231, 231);
+    color: rgb(231,231,231);
     /* transition: all 3s; */
 }
 
@@ -292,14 +292,15 @@ html{
     width: 100%;
     position: relative;
     margin-top: 17rem;
+    padding-bottom: 5rem;
     gap: 1.2rem;
-    background-color: rgba(231, 231, 231, 0.975);
+    background-color: rgb(231,231,231);
 }
 
 .project-heading{
     padding-top: 3.6rem;
     letter-spacing: 0.1rem;
-    color: rgba(206, 74, 74, 0.977);
+    color: rgba(237, 59, 59, 0.977);
     font-size: 5rem;
     font-weight: 450;
     text-align: center;
@@ -497,3 +498,204 @@ html{
     padding-left: 8rem;
 }
 
+/* Stack-Section-Code */
+
+.stack-wrapper{
+    padding-top: 8rem;
+    padding-bottom: 15rem;
+    /* height: 100vh; */
+    background-color: white;
+    color: black;
+    
+}
+
+.stack-container{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-weight: 300;
+    display: flex;
+    justify-content: space-between;
+}
+
+               /* Left Stack */ 
+
+.left-stack{
+    width: 90%;
+    display: flex;
+    padding-bottom: 4rem;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.me-text span{
+    color: rgb(232, 70, 11);
+    font-size: 6rem;
+}
+
+.me-text .e-span{
+    color: rgb(232, 70, 11);
+    font-size: 3.8rem;
+    margin-left: -0.7rem;
+}
+
+.mytech-text{
+    color: rgb(232, 70, 11);
+    font-size: 3.2rem;
+    margin-top: -3rem;
+}
+
+.stack-desc{
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    width: 93%;
+    text-align: justify
+}
+                 /* Right Stack */
+
+
+.right-stack{
+    /* height: 100%; */
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.8rem;
+    width: 100%;
+    margin-left: 6rem;
+    padding-top: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* z-index: ; */
+    /* animation: blob-animation 0.8s linear 0s infinite alternate; */
+}
+
+.blob{
+    position: absolute;
+    top: 24.5%;
+    left: 15%;
+    animation: blob-animate 2s linear 0s infinite alternate-reverse;
+}   
+
+@keyframes blob-animate{
+    from{
+        transform: translate(0px,0px);
+    }
+    to{
+        transform: translate(30px,-30px);
+    }
+}
+
+.right-stack a{
+    height: 50px;
+    
+}
+
+.stack-img{
+    position: relative;
+    height: 5.7rem;
+    width: 5.7rem;
+    z-index: 5;
+    transition: all 0.4s;
+}
+
+.stack-img:hover{
+    transform: scale(1.2);
+}
+
+.skill-text{
+    position: absolute;
+    margin-top: 2rem;
+    right: 3%;
+    user-select: none;
+    font-size: 13rem;
+    color:rgb(231,231,231);
+}
+
+/* Contact-Section Code */
+
+.contact-wrapper{
+    background-color: rgb(231,231,231);
+
+}
+
+.contact-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-text h2{
+    padding-top: 2rem;
+    color:  rgb(232, 70, 11);
+    font-size: 5.1rem;
+    font-weight: 375;
+}
+
+.contact-container p{
+    font-size: 3rem;
+    color: rgba(112, 110, 110, 0.961);
+}
+
+.footer{
+    background-color: rgb(7, 24, 54);
+    padding-top: 5rem;
+    height: 20rem;
+    position: relative;
+
+}
+
+.footer-items{
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.bookmarks{
+    display: flex;
+    gap: 2rem;
+    
+    
+}
+
+.bookmarks a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    transition: all 0.4s;
+
+}
+
+.bookmarks a:hover{
+    color:  rgb(232, 70, 11);
+
+}
+
+.footer-icons{
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.footer-icons i{
+    color: white;
+    font-size: 2rem;
+    transition: all 0.4s;
+}
+
+.footer-icons i:hover{
+    color:  rgb(232, 70, 11);
+
+}
+
+.footer-text{
+    position: absolute;
+    left: 0.5%;
+    bottom: -2%;
+    color: rgba(193, 193, 193, 0.422);
+    font-size: 6rem;
+}
