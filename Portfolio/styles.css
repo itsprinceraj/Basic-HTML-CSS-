@@ -28,7 +28,7 @@ html{
     /* width: 100vw; */
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: rgb(20, 26, 53);
+    /* background-color: rgb(20, 26, 53); */
     color: rgba(231, 227, 227, 0.945);
     
 }
@@ -40,14 +40,16 @@ html{
 }
 
 .navbar{
-    height: 4rem;
+    height: 6rem;
     width: 100%;
-    margin-top:  0.1rem;
+    padding: 0rem 12rem 0rem 12rem;
+    /* margin-top:  0.1rem; */
     /* padding-right: 20%;  */
     display: flex;
     justify-content: space-between;
     align-items: center;
     letter-spacing: 0.1rem;
+    background-color: rgb(20, 26, 53);
 
 }
 
@@ -55,17 +57,17 @@ html{
     display: flex;
     font-size: 1.4rem;
     user-select: none;
+    align-items: center;
 }
 
 .p img{
     height: 7rem;
     width: 6.5rem;
-    margin-top: 1.8rem;
 }
 
 .namecontainer span{
-    margin-top: 4rem;
-    margin-left: -1.8rem;
+    margin-bottom: 1rem;
+    margin-left: -1.9rem;
     font-weight: 500;
 }
 
@@ -97,8 +99,9 @@ html{
     height: 100%;
     position: relative;
     display: flex;
-    margin-top: 10%;
+    margin-top: 15%;
     justify-content: space-between;
+    color: black;
 
 }
 
@@ -107,7 +110,7 @@ html{
 .hero-left{
     /* position: relative; */
     height: 100%;
-    width: 48%;
+    width: 55%;
     /* margin:  auto; */
     display: flex;
     flex-direction: column;
@@ -115,40 +118,41 @@ html{
 }
 
 .heading-first{
-    font-size: 2rem;
-    font-weight: 300;
-    color: rgb(117, 88, 212);
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: rgb(92, 66, 174);
     /* color: rgb(83, 148, 233); */
    
 }
 
 .heading-second{
-    font-size: 2.4rem;
+    font-size: 3rem;
     font-weight: 500;
     
 }
 
 .desc{
-    /* margin-top: 0.7rem; */
+    font-size: 1.5rem;
     margin-bottom: 3rem;
-    line-height: 1.5rem;
+    line-height: 2rem;
+    width: 90%;
 }
 
 .role{
     font-weight: 500;
-    color: rgb(59, 130, 211);
+    color: rgb(58, 118, 230);
 }
 
 .fade-text{
     position: absolute;
-    bottom: -85%;
+    bottom: -84.5%;
     left: -5%;
     margin-bottom: 1.4rem;
     user-select: none;
     font-size: 8em;
     font-weight: 600;
     /* color: rgba(110, 93, 207, 0.765); */
-    color: rgb(231,231,231);
+    color: rgb(231, 231, 231);
     /* transition: all 3s; */
 }
 
@@ -196,7 +200,6 @@ html{
     
 }
 
-
                            /* Hero section-right */
 
 .hero-right{
@@ -215,10 +218,10 @@ html{
     height: 24rem;
     width: 20rem;
     padding: 2.5rem;
-    background: rgba(255, 255, 255, 0.922);
+    background: rgba(250, 247, 247, 0.804);
     /* border: 2rem solid white; */
     /* filter: grayscale(1); */
-    box-shadow: 5px 5px 10px rgba(255, 255, 255, 0.863);
+    box-shadow: 5px 5px 10px rgba(124, 123, 123, 0.961);
     transition: all 1s linear;
     animation: userimage 3s linear 0s infinite alternate ;
     z-index: -1;
@@ -226,12 +229,12 @@ html{
 
 @keyframes userimage{
     from{
-        transform: scale(1)
+        transform: scale(1);
+        box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.712);
     }
 
     to{
         transform: scale(1.1);
-         box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.712);
         filter: grayscale(1);
         
     }
@@ -294,7 +297,7 @@ html{
     margin-top: 17rem;
     padding-bottom: 5rem;
     gap: 1.2rem;
-    background-color: rgb(231,231,231);
+    background-color: rgb(231, 231, 231);
 }
 
 .project-heading{
@@ -511,8 +514,6 @@ html{
 
 .stack-container{
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
     font-weight: 300;
     display: flex;
     justify-content: space-between;
@@ -606,23 +607,18 @@ html{
 
 .skill-text{
     position: absolute;
-    margin-top: 2rem;
+    margin-top: 2.1rem;
     right: 3%;
     user-select: none;
     font-size: 13rem;
-    color:rgb(231,231,231);
+    color:rgb(231, 231, 231);
 }
 
-/* Contact-Section Code */
+                /* Contact-Section Code */
 
 .contact-wrapper{
-    background-color: rgb(231,231,231);
+    background-color:rgb(231, 231, 231);
 
-}
-
-.contact-container{
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .contact-text h2{
@@ -634,21 +630,64 @@ html{
 
 .contact-container p{
     font-size: 3rem;
-    color: rgba(112, 110, 110, 0.961);
+    color: rgb(128, 133, 155);
 }
+
+.form-area{
+    width: 70%;
+    margin: 4.5rem auto 0rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.text-field{
+    height: 2rem;
+    padding: 1.1rem 0rem 1.2rem 2rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    font-weight: 300;
+    box-shadow: 1px 1px 8px black;
+}
+
+#text-area{
+    height: 10rem;
+    width: 100%;
+}
+
+.msg-button{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    width: 15rem;
+    font-size: 1.1rem;
+    font-weight: 350;
+    transition: all 0.4s;
+}
+
+.msg-button:hover{
+    transform: scale(0.9);
+    border: none;
+}
+
+.msg-button i{
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+
+                  /* Footer-section */
 
 .footer{
     background-color: rgb(7, 24, 54);
-    padding-top: 5rem;
-    height: 20rem;
+    height: 18rem;
     position: relative;
 
 }
 
 .footer-items{
+    padding-top: 3rem;
     position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -677,7 +716,7 @@ html{
 
 .footer-icons{
     display: flex;
-    gap: 1rem;
+    gap: 1.5rem;
     
 }
 
@@ -694,8 +733,8 @@ html{
 
 .footer-text{
     position: absolute;
-    left: 0.5%;
-    bottom: -2%;
+    left: 2rem;
+    bottom: 3%;
     color: rgba(193, 193, 193, 0.422);
     font-size: 6rem;
 }
