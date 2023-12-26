@@ -5,52 +5,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Razorpay</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 </head>
 <body>
-    <div class="m-0 p-0 overflow-x-hidden relative w-full">
+    <div class="m-0 p-0 overflow-x-hidden relative w-full h-full">
+
+                                     <!-- Navbar  -->
+
         <nav class="bg-deepBlue ">
-            <div class="w-[1080px] mx-auto relative text-white flex items-center justify-between font-mullish">
+            <div class="w-[1080px] mx-auto relative text-white flex items-center justify-between font-mullish ">
                 <div>
                     <a href="#">
                         <img src="images/logo.svg" width="125px" height="30px" alt="logo"/>
                     </a>
                 </div>
                 <ul class=" text-xs flex space-x-6  " >
-                    <li class="py-7 ml-6 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                    <li class="py-7 ml-6 group relative text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
                         <a href="#">Payments</a>
                         
                         <div class="bg-lightBlue w-full h-1 absolute bottom-0 hidden group-hover:block transition-all duration-200"></div>
                     </li>
                     
-                    <li class="py-7 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
-                        <a href="#">Banking</a>
+                    <li class="py-7 group relative  text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                        <a href="#">Banking+</a>
 
                         <div class="bg-lightBlue w-full h-1 absolute bottom-0 hidden group-hover:block transition-all duration-200"></div>
                     </li>
 
-                    <li class="py-7 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
-                        <a href="#">Corporate card</a>
+                    <li class="py-7 group relative  text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                        <a href="#">Credit</a>
 
                     </li>
 
-                    <li class="py-7 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                    <li class="py-7 group relative  text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
                         <a href="#">Payroll</a>
 
                     </li>
 
-                    <li class="py-7 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                    <li class="py-7 group relative  text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
                         <a href="#">Resources</a>
 
                         <div class="bg-lightBlue w-full h-1 absolute bottom-0 hidden group-hover:block transition-all duration-200"></div>
                     </li>
 
-                    <li class="py-7 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                    <li class="py-7 group relative  text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
                         <a href="#">Support</a>
 
                         <div class="bg-lightBlue w-full h-1 absolute bottom-0 hidden group-hover:block transition-all duration-200"></div>
                     </li>
 
-                    <li class="py-7 group relative hover:text-lightBlue transition-all duration-200 cursor-pointer ">
+                    <li class="py-7 group relative  text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
                         <a href="#">Pricing</a>
 
                         <div class="bg-lightBlue w-full h-1 absolute bottom-0 hidden group-hover:block transition-all duration-200"></div>
@@ -60,7 +64,8 @@
                     <img class="ml-6 " src="images/india-flag.svg" alt="" width="28" height="20">
                 </div>
                 <button class="py-3 px-5 border-lightBlue border rounded-sm text-sm">Login</button>
-                <button class="bg-white py-3 px-4 transition-all duration-200 text-lightBlue300 hover:text-lightBlue500 border rounded-sm  text-sm">Sign up <svg
+                <button class="bg-white py-3 px-4 transition-all duration-200 text-lightBlue300 hover:text-lightBlue500 border rounded-sm font-semibold text-sm">Sign up 
+                    <svg
                     viewBox="0 0 24 24"
                     focusable="false"
                     class="w-[25px] h-[14px] ml-3"
@@ -69,9 +74,41 @@
                       fill="currentColor"
                       d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
                     ></path>
-                  </svg></button>
+                  </svg>
+                </button>
+            
             </div>
         </nav>
+
+                                    <!-- Hero Section -->
+
+        <div id="hero_container" class="w-full relative text-white h-[1080px] bg-deepBlue">
+            <div id="hero" class="w-[1080px] pt-24  mx-auto relative flex justify-between " >
+                <div id="left" class=" flex-col space-y-8">
+                    <h1 class="text-5xl w-[450px] font-extrabold">Power your finance, grow your business</h1>
+                    <div class="bg-green-400 h-[3px] w-6"></div>
+                    <p class="text-lg w-[400px] text-gray-300">Accept payments from customers. Automate payouts to vendors & employees. Never run out of working capital.</p>
+                    <button class="w-[195px] text-base font-semibold hover:bg-blue-600 transition-all duration-200 px-4 h-11 bg-blue-500 rounded flex items-center"> Sign Up Now <svg
+                        viewBox="0 0 24 24"
+                        focusable="false"
+                        class="w-[30px] h-[18px] ml-1 font-semibold"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                        ></path>
+                      </svg>
+                    </button>
+                </div>
+                <div id="right" class="w-[675px]">
+                    <img src="images/hero-illustration.jpg" alt="">
+                </div>
+            </div>
+            
+        </div>
+        <div class="w-full h-[500px] absolute ">
+            <img src="images/hero-shape.svg" alt="">
+        </div>
     </div>
 </body>
 </html> 
