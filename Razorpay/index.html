@@ -6,9 +6,12 @@
     <title>Razorpay</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="https://kit.fontawesome.com/ae94d73b17.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="m-0 p-0 overflow-x-hidden relative w-full h-full">
+    <div class="m-0 p-0 overflow-x-hidden  relative w-full font-mullish">
 
                                      <!-- Navbar  -->
 
@@ -19,7 +22,7 @@
                         <img src="images/logo.svg" width="125px" height="30px" alt="logo"/>
                     </a>
                 </div>
-                <ul class=" text-xs flex space-x-6  " >
+                <ul class=" text-xs flex space-x-6 text-gray-200 " >
                     <li class="py-7 ml-6 group relative text-sm hover:text-lightBlue transition-all duration-200 cursor-pointer ">
                         <a href="#">Payments</a>
                         
@@ -63,18 +66,18 @@
                 <div>
                     <img class="ml-6 " src="images/india-flag.svg" alt="" width="28" height="20">
                 </div>
-                <button class="py-3 px-5 border-lightBlue border rounded-sm text-sm">Login</button>
-                <button class="bg-white py-3 px-4 transition-all duration-200 text-lightBlue300 hover:text-lightBlue500 border rounded-sm font-semibold text-sm">Sign up 
+                <button class="py-3 font-bold px-5 border-lightBlue border rounded-sm text-sm">Login</button>
+                <button class="bg-white py-3 pl-3 w-[120px] transition-all duration-200 flex items-center text-lightBlue300 hover:text-lightBlue500 border rounded-sm font-semibold text-sm">Sign up 
                     <svg
                     viewBox="0 0 24 24"
                     focusable="false"
-                    class="w-[25px] h-[14px] ml-3"
+                    class="w-[30px] h-[18px] ml-0 font-extrabold"
                   >
                     <path
                       fill="currentColor"
                       d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
                     ></path>
-                  </svg>
+                    </svg>
                 </button>
             
             </div>
@@ -82,16 +85,16 @@
 
                                     <!-- Hero Section -->
 
-        <div id="hero_container" class="w-full relative text-white h-[1080px] bg-deepBlue">
+        <div id="hero_container" class="w-full relative text-white bg-deepBlue">
             <div id="hero" class="w-[1080px] pt-24  mx-auto relative flex justify-between " >
-                <div id="left" class=" flex-col space-y-8">
-                    <h1 class="text-5xl w-[450px] font-extrabold">Power your finance, grow your business</h1>
+                <div id="left" class=" flex-col space-y-8 pb-[100px]">
+                    <h1 class="text-[50px] w-[450px] leading-[60px] font-extrabold">Power your finance, grow your business</h1>
                     <div class="bg-green-400 h-[3px] w-6"></div>
-                    <p class="text-lg w-[400px] text-gray-300">Accept payments from customers. Automate payouts to vendors & employees. Never run out of working capital.</p>
-                    <button class="w-[195px] text-base font-semibold hover:bg-blue-600 transition-all duration-200 px-4 h-11 bg-blue-500 rounded flex items-center"> Sign Up Now <svg
+                    <p class="text-lg w-[400px] text-gray-300 opacity-70">Accept payments from customers. Automate payouts to vendors & employees. Never run out of working capital.</p>
+                    <button class="w-[200px] text-white font-bold text-base hover:bg-blue-600 transition-all duration-200 px-4 h-11 bg-blue-500 rounded flex items-center"> Sign Up Now <svg
                         viewBox="0 0 24 24"
                         focusable="false"
-                        class="w-[30px] h-[18px] ml-1 font-semibold"
+                        class="w-[34px] h-[24px]  font-bold pt-1 "
                       >
                         <path
                           fill="currentColor"
@@ -100,15 +103,291 @@
                       </svg>
                     </button>
                 </div>
-                <div id="right" class="w-[675px]">
+                <div id="right" class="w-[680px]">
                     <img src="images/hero-illustration.jpg" alt="">
                 </div>
             </div>
             
         </div>
-        <div class="w-full h-[500px] absolute ">
-            <img src="images/hero-shape.svg" alt="">
+        <div class="relative left-0 right-0 w-[103%]   ">
+            <img class="w-full " src="images/hero-shape.svg" alt="">
         </div>
+
+                               <!-- Feature Section -->
+
+        <div id="feature" class=" relative w-full  ">
+            <img class="absolute -top-[8rem] left-[10rem] -z-50" src="images/feature-section1-dottedrows.png" alt="" width="233" height="167">
+            <img class="absolute right-0 top-[3rem] rotate-180 -z-50 inline-block" src="images/feature-section1-dottedrows.png" alt="" width="233" height="167">
+
+            <div class="w-[1080px] mx-auto flex flex-col items-center relative  ">
+                <p class=" pt-7 font-extrabold text-2xl text-black text-center">Accept Payments with Razorpay Payment Suite</p>
+                <div class="bg-green-400 h-[4px] w-6 mt-4"></div>
+                <div id="features_left" class="relative text-black border-solid border-[1px] border-gray-200 rounded-md  w-full py-[50px] px-[60px] mt-20 z-10"> 
+                    <h3 class="text-[35px] font-bold w-[520px] leading-[60px]"> Supercharge your business with the all‑powerful <span class="text-blue-500">Payment Gateway</span>
+                    </h3>
+                    <ul class="mt-8 leading-[45px]">
+                        <li><i class="fa-solid fa-check text-green-400 h mr-3"></i>
+                            100+ Payment Methods</li>
+                        <li><i class="fa-solid fa-check text-green-400 h mr-3"></i>Industry Leading Success Rate</li>
+                        <li><i class="fa-solid fa-check text-green-400 h mr-3"></i>Superior Checkout Experience</li>
+                        <li><i class="fa-solid fa-check text-green-400 h mr-3"></i>Easy to Integrate</li>
+                        <li><i class="fa-solid fa-check text-green-400 h mr-3"></i>Instant Settlements from day 1</li>
+                        <li><i class="fa-solid fa-check text-green-400 h mr-3"></i>In-depth Reporting and Insights</li>
+                    </ul>
+                    <div id="button" class="flex items-center mt-8">
+                        <button class="w-[200px] text-white font-bold text-base hover:bg-blue-600 transition-all duration-200 px-4 h-11 bg-blue-500 rounded flex items-center"> Sign Up Now <svg
+                            viewBox="0 0 24 24"
+                            focusable="false"
+                            class="w-[34px] h-[24px]  font-bold pt-1 "
+                          >
+                            <path
+                              fill="currentColor"
+                              d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"
+                            ></path>
+                          </svg>
+                        </button>
+                        <div id="know_more" class="font-bold flex items-center ml-6 text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                            chevron_right
+                            </span>
+                        </div> 
+                    </div>
+                    <div id="bg_image" class="absolute top-0 right-0 bottom-0  ">
+                        <img src="images/payment-suite.png" alt=""  class="w-[600px] h-[685px] ">
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+                                <!-- Payment Grid -->
+
+        <div class="w-[1080px] m-auto relative">
+            <div id="grid" class=" grid grid-cols-3 max-w-[1080px] gap-6 relative mt-16">
+                <div class="py-[30px] pl-[25px] cursor-pointer pr-[60px] flex flex-col space-y-4  relative">
+
+                    <svg
+                      viewBox="0 0 349.32501220703125 225"
+                      xmlns="http://www.w3.org/2000/svg"
+                      preserveAspectRatio="none"
+                      class="stroke-1 stroke-[#818597] h-full w-full absolute z-[-1] top-0 left-0 transition-all duration-200"
+                      style="stroke-opacity: 0.15"
+                       >
+                <path
+                      d="m 0 6 
+                  a 6 6 0 0 1 6 -6 
+                  h 250.32501220703125 
+                  a 16 16 0 0 1 11 5 
+                  l 77 77 
+                  a 16 16 0 0 1 5 11 
+                  v 126 
+                  a 6 6 0 0 1 -6 6 
+                  h -337.32501220703125 
+                  a 6 6 0 0 1 -6 -6 
+                  z"
+                      fill="#fff"
+                ></path>
+                  </svg>
+
+                    <img src="images/payment-link-icon.svg" alt="" class="w-12 h-12 absolute top-2 right-2 bg-lightBlue rounded-full z-[-2] ">
+                    <h3 class="font-extrabold text-[26px]">Payment Links</h3>
+                    <p class="opacity-[.58] leading-[33px]">Share payment link via an email, SMS, messenger, chatbot etc. and get paid immediately
+                    </p>
+                    <div id="know_more" class="font-bold flex items-center text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                        chevron_right
+                        </span>
+                    </div> 
+                </div>
+                
+                <div class="py-[30px] pl-[25px] pr-[60px] cursor-pointer flex flex-col space-y-4 relative">
+
+                    <svg
+                    viewBox="0 0 349.32501220703125 225"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    class="stroke-1 stroke-[#818597] h-full w-full absolute z-[-1] top-0 left-0 transition-all duration-200"
+                    style="stroke-opacity: 0.15"
+                     >
+              <path
+                    d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z"
+                    fill="#fff"
+              ></path>
+                </svg>
+
+                    <img src="images/payment-pages-icon.svg" alt="" class="w-12 h-12 absolute top-2 right-2 bg-lightBlue rounded-full z-[-2] ">
+                    <h3 class="font-extrabold text-[26px]">Payment Pages</h3>
+                    <p class="opacity-[.58] leading-[33px]">Take your store online instantly with zero coding. Accept international & domestic payments
+                    </p>
+                    <div id="know_more" class="font-bold flex items-center text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                        chevron_right
+                        </span>
+                    </div> 
+                </div>
+
+                <div class="py-[30px] pl-[25px] cursor-pointer  pr-[60px] flex flex-col space-y-4 relative rounded-md">
+
+                    <svg
+                    viewBox="0 0 349.32501220703125 225"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    class="stroke-1 stroke-[#818597] h-full w-full absolute z-[-1] top-0 left-0 transition-all duration-200"
+                    style="stroke-opacity: 0.15"
+                     >
+              <path
+                    d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z"
+                    fill="#fff"
+              ></path>
+                </svg>
+
+                    <img src="images/payment-buttons-icon.svg" alt="" class="w-12 h-12 absolute top-2 right-2 bg-lightBlue rounded-full z-[-2] ">
+                    <h3 class="font-extrabold text-[26px]">Payment Buttons</h3>
+                    <p class="opacity-[.58] leading-[33px]">Create, Copy & Collect With Payment Button. Collect one time or subscription payments & more
+                    </p>
+                    <div id="know_more" class="font-bold flex items-center text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                        chevron_right
+                        </span>
+                    </div> 
+                </div>
+
+                <div class="py-[30px] pl-[25px]  cursor-pointer pr-[60px] flex flex-col space-y-4 relative">
+
+                    <svg
+                    viewBox="0 0 349.32501220703125 225"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    class="stroke-1 stroke-[#818597] h-full w-full absolute z-[-1] top-0 left-0 transition-all duration-200"
+                    style="stroke-opacity: 0.15"
+                     >
+              <path
+                    d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z"
+                    fill="#fff"
+              ></path>
+                </svg>
+
+                    <img src="images/subscriptions-icon.svg" alt="" class="w-12 h-12 absolute top-2 right-2 bg-lightBlue rounded-full z-[-2] ">
+                    <h3 class="font-extrabold text-[26px]">Subscriptions</h3>
+                    <p class="opacity-[.58] leading-[33px]">Subscription plans with automated recurring transactions on various payment modes.
+                    </p>
+                    <div id="know_more" class="font-bold flex items-center text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                        chevron_right
+                        </span>
+                    </div> 
+                </div>
+
+                <div class="py-[30px] pl-[25px]  cursor-pointer pr-[60px] flex flex-col space-y-4 relative">
+
+                    <svg
+                    viewBox="0 0 349.32501220703125 225"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    class="stroke-1 stroke-[#818597] h-full w-full absolute z-[-1] top-0 left-0 transition-all duration-200"
+                    style="stroke-opacity: 0.15"
+                     >
+              <path
+                    d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z"
+                    fill="#fff"
+              ></path>
+                </svg>
+
+                    <img src="images/route-icon.svg" alt="" class="w-12 h-12 absolute top-2 right-2 bg-lightBlue rounded-full z-[-2] ">
+                    <h3 class="font-extrabold text-[26px]">Route</h3>
+                    <p class="opacity-[.58] leading-[33px]">Split incoming payments automatically to vendor’s accounts, manage marketplace money flow...
+                    </p>
+                    <div id="know_more" class="font-bold flex items-center text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                        chevron_right
+                        </span>
+                    </div> 
+                </div>
+
+                <div class="py-[30px] pl-[25px] cursor-pointer  pr-[60px] flex flex-col space-y-4 relative">
+
+                    <svg
+                    viewBox="0 0 349.32501220703125 225"
+                    xmlns="http://www.w3.org/2000/svg"
+                    preserveAspectRatio="none"
+                    class="stroke-1 stroke-[#818597] h-full w-full absolute z-[-1] top-0 left-0 transition-all duration-200"
+                    style="stroke-opacity: 0.15"
+                     >
+              <path
+                    d="m 0 6 
+                a 6 6 0 0 1 6 -6 
+                h 250.32501220703125 
+                a 16 16 0 0 1 11 5 
+                l 77 77 
+                a 16 16 0 0 1 5 11 
+                v 126 
+                a 6 6 0 0 1 -6 6 
+                h -337.32501220703125 
+                a 6 6 0 0 1 -6 -6 
+                z"
+                    fill="#fff"
+              ></path>
+                </svg>
+
+                    <img src="images/smart-collect-icon.svg" alt="" class="w-12 h-12 absolute top-2 right-2 bg-lightBlue rounded-full z-[-2] ">
+                    <h3 class="font-extrabold text-[26px]">Smart Collect</h3>
+                    <p class="opacity-[.58] leading-[33px]">Automatically reconcile incoming NEFT, RTGS, IMPS, UPI payments using Customer Identifiers & UPI-IDs
+                    </p>
+                    <div id="know_more" class="font-bold flex items-center text-blue-500 hover:text-black cursor-pointer transition-all duration-200" >Know More <span class="material-symbols-outlined pt-1 pl-1">
+                        chevron_right
+                        </span>
+                    </div> 
+                </div>
+            
+            </div>
+            
+            <div id="note" class="flex space-x-2 justify-center border-blue-300 rounded-md border-[1px] py-4 mt-5 bg-gradient-to-b from-blue-100 to-white">
+                <p class="text-[14px] font-extrabold">Not sure which product to choose?
+                </p>
+                <p class="text-[14px] opacity-[0.64]">Answer a few questions and we'll help you out</p>
+                <div id="know_more" class="font- flex items-center ml-6 text-blue-500 font-semibold hover:text-white hover:bg-blue-500 cursor-pointer transition-all duration-200 text-[14px]" >Find me a Product  <span class="material-symbols-outlined pl-1">
+                    chevron_right
+                    </span>
+                </div>
+                
+            </div>
+
+        </div>       
     </div>
 </body>
 </html> 
