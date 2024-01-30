@@ -7,6 +7,71 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <section id="wrapper" class=" w-[100vw] h-[100vh] flex justify-center items-center bg-slate-900 relative"> 
+        <div class="circle-pink rounded-full h-[110px] w-[110px] bg-pink-600 absolute top-[10%] left-[34%]"></div>
+
+        <div class="circle-purple rounded-full h-[130px] w-[130px] bg-purple-700 absolute bottom-[7%] right-[33%]"></div>
+
+        <div id="card" class="z-10 w-[16%] h-[50%] flex flex-col items-center bg-slate-600 rounded-md py-5 text-white gap-3 pt-12 ">
+
+            <img id="photo" src="image/Prince.jpg" alt="" class="w-[100px] h-[100px] rounded-full object-fill">
+
+            <h2 id="name" class="text-[20px] font-bold text-gray-200" > Prince Raj</h2>
+
+            <h3 id="designation" class="text-[14px] text-gray-200">Full Stack Engineer</h3>
+
+            <div id="button" class="flex gap-2  ">
+
+                <button id="share-button" class="text-[12px] border-[2px] border-gray-200  hover:bg-white hover:text-black hover:font-semibold rounded-sm px-2 py-[1.5px] transition-all duration-200 text-gray-200 " ><i class="fa-solid fa-share pr-[1.5px] " onclick="openModal()"></i> Share Profile</button>
+
+                <button class="text-[12px] border-[2px] hover:font-semibold border-gray-200  hover:bg-white hover:text-black rounded-sm px-2 py-[1.5px] transition-all duration-200  text-gray-200">Follow me <i class="fa-solid fa-circle-plus pl-[1.5px]"></i></button>
+    
+            </div>
+
+            <section id="modal" class=" w-[300px] h-[140px] flex flex-col gap-2 bg-black absolute px-3 rounded-md transition-all duration-300 top-[40%] ">
+                <div class=" flex gap-[110px] items-center border-b">
+                    <p class=" text-[19px] font-semibold mt-1">Share My Profile</p>
+                    <button class="cross-button" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+
+                <div class="flex flex-col gap-3">
+                    <span class=" text-[16px] font-semibold ">Share this Via</span>
+
+                    <div class=" flex gap-3 text-[17px] justify-center">
+                        <a href="#" id="facebook" class="icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" id="twitter" class="icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+
+                        <a href="#" id="instagram" class="icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="#" id="whatsapp" class="icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        
+                        <a href="#" id="telegram" class="icon">
+                            <i class="fa-brands fa-telegram"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                
+            </section>
+
+        </div>
+
+        <div id="overlay" onclick="closeModal()"></div>
+    </section>
+
+
+    <script src="https://kit.fontawesome.com/ae94d73b17.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
