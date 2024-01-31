@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <h1>PASSWORD GENERATOR  </h1>
+        <div>
+            <input type="text" readonly class="generated-pass" placeholder="Password">
+            <button>
+                <img src="" alt="copy" class="copy-text">
+                <span class="copy-msg"></span>
+            </button>
+        </div>
+
+        <!-- SLIDER AND PASS SELECTOR -->
+
+        <div>
+            <div>
+                <p class="pass-text">Password Length</p>
+                <span class="pass-length">0</span>
+            </div>
+            <input type="range" name="slider" id="pass-length-slider">
+
+            <!-- Checkbox -->
+
+            <div>
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">uppercase Letters</label>
+            </div>
+            
+            <div>
+                <input type="checkbox" id="lowercase">
+                <label for="lowercase">lowercase Letters</label>
+            </div>
+            <div>
+                <input type="checkbox" id="numbers">
+                <label for="numbers">numbers </label>
+            </div>
+            <div>
+                <input type="checkbox" id="symbols">
+                <label for="numbers">numbers </label>
+            </div>
+            
+            <div>
+                <p class="strength">Strength</p>
+                <div class="indicator"></div>
+            </div>
+
+            <button class="generate-button">GENERATE PASSWORD</button>
+
+            
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
