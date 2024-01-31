@@ -4,6 +4,7 @@ let modal = document.getElementById("modal");
 let remove = document.getElementById("cross-button");
 let photo = document.getElementById("photo"); 
 let cross = document.getElementById("cross");
+let wrapper = document.getElementById("wrapper");
 
 
 // let openModal = function (){
