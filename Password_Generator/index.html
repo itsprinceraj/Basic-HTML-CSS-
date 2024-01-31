@@ -11,9 +11,9 @@
         <h1>PASSWORD GENERATOR  </h1>
         <div>
             <input type="text" readonly class="generated-pass" placeholder="Password">
-            <button>
-                <img src="" alt="copy" class="copy-text">
-                <span class="copy-msg"></span>
+            <button class="copy-button">
+                <i class="fa-regular fa-copy"></i>
+                <p class="copy-msg"></p>
             </button>
         </div>
 
@@ -22,28 +22,28 @@
         <div>
             <div>
                 <p class="pass-text">Password Length</p>
-                <span class="pass-length">0</span>
+                <p class="pass-length">0</p>
             </div>
-            <input type="range" name="slider" id="pass-length-slider">
+            <input type="range" min="1" max="50" step="1" name="slider" id="slider">
 
             <!-- Checkbox -->
 
             <div>
                 <input type="checkbox" id="uppercase">
-                <label for="uppercase">uppercase Letters</label>
+                <label for="uppercase"> Include Uppercase Letters</label>
             </div>
             
             <div>
                 <input type="checkbox" id="lowercase">
-                <label for="lowercase">lowercase Letters</label>
+                <label for="lowercase">Include Lowercase Letters</label>
             </div>
             <div>
                 <input type="checkbox" id="numbers">
-                <label for="numbers">numbers </label>
+                <label for="numbers">Include Numbers </label>
             </div>
             <div>
                 <input type="checkbox" id="symbols">
-                <label for="numbers">numbers </label>
+                <label for="symbols">Include Symbols </label>
             </div>
             
             <div>
@@ -58,7 +58,7 @@
         </div>
 
     </div>
-
+    <script src="https://kit.fontawesome.com/ae94d73b17.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
