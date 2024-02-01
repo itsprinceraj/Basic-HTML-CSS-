@@ -9,9 +9,25 @@
     margin-left: 20px ;
 }
 
-.active{
-    opacity: 1;
+.wrapper{
+    background-color: #04283e;
+    background-image: linear-gradient(225deg, #152041 0%, #071121d6 50%, #0f334d 100%);
 }
+
+
+h1{
+    background: #f3eded1a;
+}
+
+.btn{
+    background: #f3eded1a;
+}
+
+
+.container{
+    background: #f3eded1a;
+}
+
 
 .indicator{
     width: 15px;

@@ -6,7 +6,7 @@ let copy_msg = document.querySelector(".copy-msg");
 
 let pass_length = document.querySelector(".pass-length");
 
-let slider = document.querySelector("#slider")
+let slider = document.querySelector("#slider");
 
 let symbols = "~`!@#$%^&*()_-+=<>?/[]{},.:;'|";
 
@@ -29,6 +29,8 @@ let password = "";
 let checkCount = 0;
 
 
+
+
 // copy button function 
 
 async function copy_content(){
@@ -40,12 +42,12 @@ async function copy_content(){
         copy_msg.innerText = "failed";
     };
 
-    copy_msg.classList.add("active");
+    copy_msg.style.cssText = "opacity:1";
 
     setTimeout(function(){
-        copy_msg.classList.remove("active")
+        copy_msg.style.cssText = "opacity:0";
 
-    }, 3000);
+    }, 2000);
 };
 
 
@@ -69,8 +71,8 @@ function handleSlider(){
 
 }
 
-slider.addEventListener("input",function(e){
-    passwordLen = e.target.value;
+slider.addEventListener("input",function(event){
+    passwordLen = event.target.value;
     handleSlider();
 });
 
@@ -95,44 +97,46 @@ function randomLowercase(){
 };
 
 function randomSymbols(){
-    var randomNum = randomIntegers(0,symbols.length);
+    const randomNum = randomIntegers(0,symbols.length);
     return symbols.charAt(randomNum);
 
 };
 
 
-function checkBoxCount(){
-    checkCount = 0;
-    allCheckBox.foreach(function(checkbox){
-        if(checkbox.checked){
-            checkCount++;
-        }
 
+// checkbox count 
+
+
+function checkBoxChangeCount(){
+    checkCount = 0;
+    allCheckBox.forEach( (checkbox) => {
+        if(checkbox.checked)
+            checkCount++;
     });
 
     if( passwordLen < checkCount){
         passwordLen = checkCount;
         handleSlider();
-    }
+    };
+
 };
 
-
-allCheckBox.foreach(function(checkbox){
-    checkbox.addEventListener("change",checkBoxCount());
+allCheckBox.forEach( (checkbox) => {
+    checkbox.addEventListener("change",checkBoxChangeCount)
+    
 });
-
-
 
 
 // indicator
 
 function setIndicator(color){
-    indicator.computedStyleMap.backgroundColor = color;
+    indicator.style.backgroundColor = color;
 
 }
 
-// strength 
-calcStrength();
+
+// calculating strength 
+
 
 function calcStrength(){
     let uppercase = false;
@@ -145,94 +149,81 @@ function calcStrength(){
     if(numberCheck.checked) number = true;
     if(symbolCheck.checked) specialChar = true;
 
-    if ((uppercase && lowercase) && (number || specialChar) && (passwordLen >= 8)){
-        setIndicator("#12fc25")
-    }else if((uppercase || lowercase) && (number || specialChar) && (passwordLen < 8)){
-        setIndicator("#ff0303")
+    if ((uppercase && lowercase) && (number || specialChar) && passwordLen >= 8){
+        return setIndicator("#12fc25")
+    }else if((uppercase || lowercase) && (number || specialChar) && passwordLen >=6){
+        return setIndicator("#ff0303")
     }else {
-        setIndicator("#cfc8c8")
+        return setIndicator("#cfc8c8")
     };
 };
 
 
 
+// Shuffle password by fisher yate algorithm
+
+
+function shuffle(array){
+    for(let i = array.length - 1; i > 0;i--){
+        const j = Math.floor(Math.random() * (i+i));
+        const temp = array[i];
+        array[i] = array [j];
+        array[j] = temp;
+    }
+    let str =""
+    array.foreach((el) => (str += el));
+    return str;
+};
+
+
+
+
+// Generate button
+
+
 generateButton.addEventListener("click",function(){
-    if(checkCount ==0){
-        return;
-    };
+    if(checkCount ==0) return;
+        
     if(passwordLen < checkCount){
         passwordLen = checkCount;
         handleSlider();
 
     };
-
-
     
-password = "";
-
-// if(uppercaseCheck.checked){
-//     password+= randomUppercase()
-// }
-// if(lowercaseCheck.checked){
-//     password+= randomLowercase()
-// }
-// if(numberCheck.checked){
-//     password+= randomNumbers()
-// }
-// if(symbolCheck.checked){
-//     password+= randomSymbols()
-// };
-
-
-let arr = [];
-
-if(uppercaseCheck.checked){
-        arr.push(randomUppercase())
+    password = "";
+    
+    let arr = [];
+    
+    if(uppercaseCheck.checked){
+            arr.push(randomUppercase())
+        }
+    if(lowercaseCheck.checked){
+            arr.push(randomLowercase())
+        }
+    if(numberCheck.checked){
+            arr.push(randomNumbers())
+        }
+    if(symbolCheck.checked){
+            arr.push(randomSymbols())
+        }
+    
+    
+    for(let i = 0; i<arr.length; i++){
+        password+=arr[i]();
     }
-if(lowercaseCheck.checked){
-        arr.push(randomLowercase())
+    
+    
+    for(let i=0; i<passwordLen-arr.length; i++){
+        let randomIndex = randomIntegers(0,arr.length);
+        password+=arr[randomIndex]();
     }
-if(numberCheck.checked){
-        arr.push(randomNumbers())
-    }
-if(symbolCheck.checked){
-        arr.push(randomSymbols())
-    }
-
-
-for(let i = 0; i<arr.length; i++){
-    generated_pass+=arr[i]()
-}
-
-
-for(i=0; i<(passwordLen-arr.length); i++){
-    let randomText = randomIntegers(0,arr.length);
-    generated_pass+=arr[randomText]();
-}
-
-
-password = shufle(Array.from(password));
-
-generated_pass.value = password;
-calcStrength();
- 
-// Shuffle password by fisher yate algorithm
-
-
-function shufle(array){
-    for(let i = array.length -1; i > 0;i++){
-        const j = Math.floor(Math.random() * (i+i));
-        const temp = array;
-        array[i] = array [j];
-        array[j] = temp;
-    }
-    let str =""
-    array.foreach(function(el){
-        (str +=el)
-        return str;
-    });
-}
-
+    
+    // password = shuffle();
+    
+    password = shuffle(Array.from(password));
+    
+    generated_pass.value = password;
+    calcStrength();
 
 });
 
