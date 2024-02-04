@@ -17,6 +17,7 @@
 
 h1{
     background: #f3eded1a;
+    border-bottom: 4px solid rgb(28, 123, 167);
 }
 
 .btn{
@@ -35,3 +36,99 @@ h1{
     border-radius: 50%;
     border: 2px solid black;
 }
+
+.pass-box::placeholder{
+
+    padding-left: 10px;
+    color: goldenrod;
+    
+
+}
+
+
+input[type=checkbox]{
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    accent-color: rgb(73, 174, 225);
+    transform: scale(1.4);   
+    cursor: pointer; 
+    border-radius: 20%;
+    background-color: white;
+    accent-color: aqua;
+
+    
+}
+
+.check input:checked::before{
+    position: absolute;
+    content: "✓";
+    font-size: 15px;
+    top: -25%;
+    left: 15%;
+    color: black;
+    font-weight: bold;
+    
+}
+
+.check input:checked{
+    background: cyan;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    position: relative;
+}
+
+
+label{
+    cursor: pointer;
+    margin-left: 4px;
+}
+
+input[type=range]{
+    appearance: none;
+    /* background: transparent; */
+    background: rgb(146, 30, 203);
+    border-radius: 10px;
+    height: 10px;
+    /* -webkit */
+}
+
+
+input[type=range]:focus{
+    border: 1px solid yellow;
+    box-shadow: 0 0 2px yellow;
+
+
+}
+
+
+#slider::-webkit-slider-thumb{
+    appearance: none;
+    color: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: yellow;
+    
+}
+
+#slider::-webkit-slider-thumb:focus{
+    outline: rgb(32, 174, 82);
+}
+
+#slider::-webkit-slider-thumb:hover{
+    box-shadow: 0 0 8px yellow;
+    transition: all 50ms ease-in;
+    background: black;
+    outline: 1px solid rgb(232, 232, 6);
+}
+#slider::-webkit-slider-runnable-track{
+    appearance: none;
+    /* background: rgb(146, 30, 203); */
+}
+

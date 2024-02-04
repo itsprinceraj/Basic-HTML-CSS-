@@ -16,7 +16,7 @@ const lowerCase = document.querySelector("#lowercase");
 const number = document.querySelector("#numbers");
 const symbol = document.querySelector("#symbols");
 
-const pass_length = document.querySelector(".pass-length");
+var pass_length = document.querySelector(".pass-length");
 
 const passBox = document.querySelector(".pass-box");
 
@@ -24,7 +24,7 @@ const generateBtn = document.querySelector(".generate-button");
 
 // Slider
 
-let passwordLength = 10;
+var passwordLength = 10;
 handleSlider();
 
 function handleSlider(){
@@ -45,7 +45,29 @@ const getRandomData = (dataSet) => {
 };
 
 
-const generatePassword = (password = "") => {
+function shuffle(array){
+    for(let i = array.length - 1; i > 0;i--){
+        const j = Math.floor(Math.random() * (i+i));
+        const temp = array[i];
+        array[i] = array [j];
+        array[j] = temp;
+    }
+    let str =""
+    array.foreach((el) => (str += el));
+    return str;
+};
+
+
+
+
+
+generateBtn.addEventListener("click",function(event){
+    // pass_length.value = event.target.value;
+    passBox.value = event.target.value;
+    // generatePassword();
+
+    let password = "";
+
     if (upperCase.checked) {
         password += getRandomData(upperSet)
     }
@@ -58,22 +80,21 @@ const generatePassword = (password = "") => {
     if (symbol.checked) {
         password += getRandomData(symbolSet)
     }
+    if (password.length < pass_length.value){
+        getRandomData(password)
+    }
     
-    if(password.length < pass_length.value){
-        return getRandomData(password);
-    };
+
+    // console.log(password.length)
     
+
+    
+    // passBox.value += password
     passBox.value += truncateString(password,pass_length.value);
-    
-};
 
-generatePassword();
-
-generateBtn.addEventListener("click",function(){
-    generatePassword();
 });
 
-
+// triming the string
 
 function truncateString(str, num) {
     if (str.length > num) {
@@ -103,12 +124,12 @@ async function copy_content(){
     setTimeout(function(){
         copy_msg.style.cssText = "opacity:0";
 
-    }, 2000);
+    }, 1000);
 };
 
 
 copy_button.addEventListener("click",function(){
     if(passBox.value){
         copy_content();
-    }
-})
+    };
+});

@@ -8,20 +8,20 @@
 </head>
 <body>
     <div class="wrapper w-[100vw] h-[100vh] flex flex-col items-center justify-center text-white">
-        <h1 class="text-[22px] font-bold font-sans w-[350px]  rounded-lg border text-center py-1 mb-2">PASSWORD GENERATOR  </h1>
+        <h1 class="text-[22px] font-bold font-sans w-[350px]  rounded-lg  text-center py-1 mb-2">PASSWORD GENERATOR  </h1>
         <div class="container flex flex-col justify-center px-4 border h-[380px] w-[360px]  rounded-xl">
             <div class=" flex gap-4 text-center">
                 <!-- <p class="pass-box "></p> -->
                 <input type="text" readonly  class="pass-box bg-transparent text-white border-[2px] rounded-md border-gray-400 h-[40px] w-[250px]" placeholder="Password">
-                <button class="copy-button flex flex-col">
-                    <i class="fa-regular fa-copy mt-2"></i>
+                <button class="copy-button flex flex-col text-white">
+                    <i class="fa-regular fa-copy mt-2 text-white"></i>
                     <p class="copy-msg "></p>
                 </button>
             </div>
     
             <!-- SLIDER AND PASS SELECTOR -->
     
-            <div class="flex flex-col gap-[8px]">
+            <div class="flex flex-col gap-[8px] slidder">
                 <div class="flex gap-16 mb-2">
                     <p class="pass-text">Password Length</p>
                     <p class="pass-length">0</p>
@@ -30,19 +30,20 @@
     
                 <!-- Checkbox -->
     
-                <div>
+                <div class="check">
                     <input type="checkbox" id="uppercase" >
                     <label for="uppercase"> Include Uppercase Letters</label>
+
                 </div>
-                <div>
+                <div class="check">
                     <input type="checkbox" id="lowercase" >
                     <label for="lowercase">Include Lowercase Letters</label>
                 </div>
-                <div>
+                <div class="check">
                     <input type="checkbox" id="numbers" >
                     <label for="numbers">Include Numbers </label>
                 </div>
-                <div>
+                <div class="check">
                     <input type="checkbox" id="symbols" >
                     <label for="symbols">Include Symbols </label>
                 </div>
@@ -56,14 +57,14 @@
         </div>
         
         <div class=" btn  button-contaienr border rounded-lg w-[300px] mt-2 ">
-            <div class="main-button flex justify-center mx-auto py-1 border hover:bg-gray-200 hover:text-black transition-all duration-200 rounded-lg">
-                <button class="generate-button  ">GENERATE PASSWORD</button>
+            <div class="main-button flex justify-center  rounded-lg">
+                <button class="generate-button mx-auto py-1 border hover:bg-gray-200 hover:text-black transition-all duration-200 w-[100%] rounded-lg  ">GENERATE PASSWORD</button>
             </div>
         </div>
         
 
     </div>
     <script src="https://kit.fontawesome.com/ae94d73b17.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

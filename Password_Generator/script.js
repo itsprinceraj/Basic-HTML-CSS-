@@ -21,6 +21,7 @@ let symbolCheck = document.querySelector("#symbols");
 let indicator = document.querySelector(".indicator");
 
 let allCheckBox = document.querySelector("input[type=checkbox]");
+// var allCheckBox = [...allBox];
 
 let generateButton = document.querySelector(".generate-button")
 
@@ -68,6 +69,10 @@ handleSlider();
 function handleSlider(){
     slider.value = passwordLen;
     pass_length.innerText = passwordLen;
+    const min = slider.min;
+    const max = slider.max;
+    slider.style.backgroundSize = ((passwordLen - min) * 100 / (max -  min) + "% 100%" )
+
 
 }
 
@@ -121,10 +126,14 @@ function checkBoxChangeCount(){
 
 };
 
-allCheckBox.forEach( (checkbox) => {
-    checkbox.addEventListener("change",checkBoxChangeCount)
+
+uppercaseCheck.addEventListener("change",checkBoxChangeCount);
+lowercaseCheck.addEventListener("change",checkBoxChangeCount);
+numberCheck.addEventListener("change",checkBoxChangeCount);
+symbolCheck.addEventListener("change",checkBoxChangeCount);
+
     
-});
+
 
 
 // indicator
@@ -162,7 +171,6 @@ function calcStrength(){
 
 // Shuffle password by fisher yate algorithm
 
-
 function shuffle(array){
     for(let i = array.length - 1; i > 0;i--){
         const j = Math.floor(Math.random() * (i+i));
@@ -174,8 +182,6 @@ function shuffle(array){
     array.foreach((el) => (str += el));
     return str;
 };
-
-
 
 
 // Generate button
