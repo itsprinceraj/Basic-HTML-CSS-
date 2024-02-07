@@ -59,6 +59,7 @@ btnmode.addEventListener("click", function () {
 // Functions
 
 //API CALL
+
 function getUserData(gitUrl) {
   fetch(gitUrl)
     .then((response) => response.json())
@@ -73,6 +74,8 @@ function getUserData(gitUrl) {
 
 
 //RENDER
+
+
 function updateProfile(data) {
   if (data.message !== "Not Found") {
     noresults.style.display = "none";
@@ -110,7 +113,9 @@ function updateProfile(data) {
 
 
 
-//SWITCH TO DARK MODE - activateDarkMode()
+//SWITCH TO DARK MODE 
+
+
 function darkModeProperties() {
   root.setProperty("--lm-bg", "#141D2F");
   root.setProperty("--lm-bg-content", "#1E2A47");
@@ -128,7 +133,8 @@ function darkModeProperties() {
 
 }
 
-//SWITCH TO LIGHT MODE - activateLightMode()
+//SWITCH TO LIGHT MODE 
+
 function lightModeProperties() {
   root.setProperty("--lm-bg", "#F6F8FF");
   root.setProperty("--lm-bg-content", "#FEFEFE");
@@ -148,18 +154,15 @@ function lightModeProperties() {
 
 //INITIALISE UI
 function init() {
-  //initialise dark-mode variable to false;
-  //darkMode = true -> dark mode enable karna h 
-  //darMode = false -> light mode enable karna h 
+  
   darkMode = false;
 
-  //HW
-// const prefersDarkMode = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  
 
   const value = localStorage.getItem("dark-mode");
 
   if(value === null) {
-    console.log("null k andar");
+    // console.log("null k andar");
     localStorage.setItem("dark-mode", darkMode);
     lightModeProperties();
   }
@@ -173,8 +176,8 @@ function init() {
   }
 
 
-  //by default, pranaygupta ki info show krre h UI pr
-  getUserData(url + "thepranaygupta");
+  //by default meri github profile show krni h UI pr
+  getUserData(url + "dev-prince-raj");
 }
 
 init();
