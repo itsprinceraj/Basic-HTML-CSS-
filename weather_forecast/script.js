@@ -178,10 +178,13 @@ async function fetchSearchWeatherInfo(city) {
         }
     }
     catch(err) {
-        alert ("city not found")
+        console.log("city not found")
+        
     }
 }
 
 function showErrorImage() {
-    errImg.style.transform = "scale(1)";
+    // errImg.style.transform = "scale(1)";
+    alert("Location not Found")
+    
 }
