@@ -1,3 +1,3 @@
-Author : Prince Raj \n
+Author : Prince Raj <br>`
 Full Stack Web Developer
 
