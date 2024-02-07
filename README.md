@@ -1,2 +1,3 @@
-Author : Prince Raj
-Full Stack Developer
+Author : Prince Raj <br>
+Full Stack Web Developer
+
