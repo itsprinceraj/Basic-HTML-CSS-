@@ -1,4 +1,6 @@
 //Variables
+
+
 const searchbar = document.querySelector(".searchbar-container");
 const profilecontainer = document.querySelector(".profile-container");
 const root = document.documentElement.style;
@@ -26,6 +28,8 @@ const company = get("company");
 let darkMode = false;
 
 // Event Listeners
+
+
 btnsubmit.addEventListener("click", function () {
   if (input.value !== "") {
     getUserData(url + input.value);
@@ -162,7 +166,7 @@ function init() {
   const value = localStorage.getItem("dark-mode");
 
   if(value === null) {
-    // console.log("null k andar");
+  
     localStorage.setItem("dark-mode", darkMode);
     lightModeProperties();
   }
@@ -177,6 +181,7 @@ function init() {
 
 
   //by default meri github profile show krni h UI pr
+
   getUserData(url + "dev-prince-raj");
 }
 
